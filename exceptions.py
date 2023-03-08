@@ -1,3 +1,8 @@
+class NotFoundError(Exception):
+    """ 资源不存在 """
+
+    status_code = 404
+
 class UnauthorizedError(Exception):
     """ 未登录 """
 

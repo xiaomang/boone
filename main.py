@@ -26,6 +26,8 @@ class Application(tornado.web.Application):
         self.db = db
         handlers = [
             (r'/', 'handlers.HomeHandler'),
+            (r'/users', 'handlers.UserHandler'),
+            (r'/users/([a-f0-9]{24})', 'handlers.UserHandler'),
         ]
         settings = {
             'debug': options['debug'],
